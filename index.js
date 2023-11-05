@@ -13,10 +13,12 @@ const added = (a, b) => {
 };
 added(5, 3);
 
-const divided = (a, b) => {
-  return divide(a, b);
-};
-console.log(divided(6, 3));
+const divided = divide(9, 3);
+console.log(divided);
+// const divided = (a, b) => {
+//   return divide(a, b);
+// };
+// console.log(divided(6, 3));
 
 const multiplied = (a, b) => {
   return multiply(a, b);
