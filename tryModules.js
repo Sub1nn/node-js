@@ -89,6 +89,6 @@ import _ from "lodash";
 // ? deep comparison => _.isEqual is used to deeply compare two values or objects. It checks if the contents of the objects are identical.
 
 // ? _.deburr is used to remove diacritics (accented characters) from a string. Normalizes text
-const text = "déjà vu";
-const deburredText = _.deburr(text);
-console.log(deburredText);
+// const text = "déjà vu";
+// const deburredText = _.deburr(text);
+// console.log(deburredText);
