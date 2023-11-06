@@ -11,7 +11,7 @@ import inquirer from "inquirer";
 
 // inquirer.prompt(questions).then((answers) => {
 //   let result;
-//   answers.name % 2 === 0 ? (result = "even") : (result = "odd");
+//   answers.num % 2 === 0 ? (result = "even") : (result = "odd");
 //   console.log(result);
 // });
 
@@ -35,12 +35,19 @@ inquirer
   ])
   .then((ans) => {
     let result = 0;
-    if (ans.string === "add") {
-      result = +ans.num1 + +ans.num2;
-    } else if (ans.string === "sub") {
-      result = +ans.num1 - +ans.num2;
-    } else {
-      result = +ans.num1 * +ans.num2;
-    }
+    // if (ans.string === "add") {
+    //   result = +ans.num1 + +ans.num2;
+    // } else if (ans.string === "sub") {
+    //   result = +ans.num1 - +ans.num2;
+    // } else {
+    //   result = +ans.num1 * +ans.num2;
+    // }
+    // console.log(result);
+    // console.log(ans);
+    ans.string === "add"
+      ? (result = +ans.num1 + +ans.num2)
+      : ans.string === "sub"
+      ? (result = +ans.num1 - +ans.num2)
+      : (result = +ans.num1 * +ans.num2);
     console.log(result);
   });

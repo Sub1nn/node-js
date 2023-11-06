@@ -1,13 +1,14 @@
 // import os from "os";
-// const _ = require("lodash");
-import _ from "lodash";
-// ? Lodash => Helps in working with arrays, numbers, objects, strings, etc.
-// ? Lodash => Its modular methods are great for iterating arrays, objects, strings. Manipulating and testing values and creating composite functions
 
 // console.log(os.version());
 // console.log(os.platform());
 // console.log(os.release());
 // console.log(os.type());
+
+// const _ = require("lodash");
+import _ from "lodash";
+// ? Lodash => Helps in working with arrays, numbers, objects, strings, etc.
+// ? Lodash => Its modular methods are great for iterating arrays, objects, strings. Manipulating and testing values and creating composite functions
 
 // ? Helps generate random number
 // const num = _.random(0, 20);
