@@ -76,10 +76,19 @@ import _ from "lodash";
 // console.log(uniqueId);
 
 // ? generate 10 uniq IDs
-const uniqueIds = [];
+// const uniqueIds = [];
 
-for (let i = 0; i < 10; i++) {
-  const uniqueId = _.uniqueId("item_");
-  uniqueIds.push(uniqueId);
-}
-console.log(uniqueIds);
+// for (let i = 0; i < 10; i++) {
+//   const uniqueId = _.uniqueId("item_");
+//   uniqueIds.push(uniqueId);
+// }
+// console.log(uniqueIds);
+
+// ? working with functions => _.debounce creates a debounced function that delays invoking your function until after a specified time period.
+
+// ? deep comparison => _.isEqual is used to deeply compare two values or objects. It checks if the contents of the objects are identical.
+
+// ? _.deburr is used to remove diacritics (accented characters) from a string. Normalizes text
+const text = "déjà vu";
+const deburredText = _.deburr(text);
+console.log(deburredText);
