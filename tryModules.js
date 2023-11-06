@@ -92,3 +92,5 @@ import _ from "lodash";
 // const text = "déjà vu";
 // const deburredText = _.deburr(text);
 // console.log(deburredText);
+
+console.table([{ abc: { a: 1, b: 2 } }, { xyz: { c: 3, d: 4 } }]);
