@@ -63,9 +63,34 @@ app.delete("/customers/delete", (req, res) => {
   // update old customer list with new customer list
 
   customers = [...newCustomersList];
-  console.log(customers);
+  //console.log(customers);
 
   return res.status(200).send({ message: "The costumer is deleted" });
+});
+
+// update customer
+app.put("/customers/edit/id/:id", (req, res) => {
+  const userToBeUpdated = +req.params.id;
+  const updatedValue = req.body;
+  // find if the customer with provided id exists
+  const customer = customers.find((item) => {
+    return item.id === userToBeUpdated;
+  });
+  //if not customer, throw error
+  if (!customer) {
+    res.status(404).send({ message: "Customer not found" });
+  }
+  // edit  customer
+  const newCustomerList = customers.map((item) => {
+    if (item.id === userToBeUpdated) {
+      item.name = updatedValue.name;
+      item.address = updatedValue.address;
+    }
+    return item;
+  });
+  // update old customer list with new customer list
+  customers = [...newCustomerList];
+  return res.status().send({ message: "Customer was updated successfully" });
 });
 
 app.listen(port, () => {
