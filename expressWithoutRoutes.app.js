@@ -69,8 +69,9 @@ app.delete("/customers/delete", (req, res) => {
 });
 
 // update customer
-app.put("/customers/edit/id/:id", (req, res) => {
-  const userToBeUpdated = +req.params.id;
+app.put("/customers/edit/:id", (req, res) => {
+  console.log(req);
+  const userToBeUpdated = req.body.id;
   const updatedValue = req.body;
   // find if the customer with provided id exists
   const customer = customers.find((item) => {
@@ -83,14 +84,15 @@ app.put("/customers/edit/id/:id", (req, res) => {
   // edit  customer
   const newCustomerList = customers.map((item) => {
     if (item.id === userToBeUpdated) {
-      item.name = updatedValue.name;
-      item.address = updatedValue.address;
+      // item.name = updatedValue.name;
+      // item.address = updatedValue.address;
+      item = { ...item, ...updatedValue };
     }
     return item;
   });
   // update old customer list with new customer list
   customers = [...newCustomerList];
-  return res.status().send({ message: "Customer was updated successfully" });
+  return res.status(200).send({ message: "Customer was updated successfully" });
 });
 
 app.listen(port, () => {

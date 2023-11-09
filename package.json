@@ -2,11 +2,11 @@
   "name": "node",
   "version": "1.0.0",
   "description": "",
-  "main": "express1.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon express1.js"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
