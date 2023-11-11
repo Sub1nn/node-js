@@ -43,7 +43,6 @@ router.delete("/customers/delete/:id", (req, res) => {
 
 router.put("/customers/edit/:id", (req, res) => {
   const updatedCustomer = req.body;
-  console.log(req.body);
   const customerToBeUpdated = +req.params.id;
   const customer = customers.find((item) => {
     return item.id === customerToBeUpdated;
