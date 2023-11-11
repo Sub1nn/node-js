@@ -9,7 +9,7 @@ const connectHandler = function connected() {
 };
 
 // emit the data received event
-eventEmitter.emit("data_received");
+// eventEmitter.emit("data_received");
 
 // bind the connection event with the handler
 eventEmitter.on("connection", connectHandler);
@@ -20,5 +20,14 @@ eventEmitter.on("data_received", () => {
   console.log("data received successfully");
 });
 
+eventEmitter.on("data_received", () => {
+  console.log("new event attached");
+});
+
+// print listeners of connection and data_received
+console.log(eventEmitter.listeners("connection"));
 //fire the connection event
 eventEmitter.emit("connection");
+eventEmitter.removeListener("connection", connectHandler); // removeListener from connection event that was listening to connectHandler and console log it
+console.log(eventEmitter.listeners("connection"));
+eventEmitter.emit("data_received"); // fire data_received event
