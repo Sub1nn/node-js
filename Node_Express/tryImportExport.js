@@ -1,4 +1,4 @@
-import fullName from "./ss.js";
+import fullName from "./fullName.js";
 import add from "./add.js";
 import divide from "./divide.js";
 import multiply from "./multiply.js";

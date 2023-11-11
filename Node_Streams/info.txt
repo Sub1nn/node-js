@@ -1,0 +1,10 @@
+Streams in Node.JS
+
+=> Streams -> Data reading -> -> Chunk by Chunk
+
+NodeJs -- Streams --> 4 type of Streams
+
+Readable => Read data from Source
+Writable => Write data to Destination
+Duplex => Read and Write
+Transform => Able to manipulate data stream
